@@ -1,7 +1,7 @@
 [project]
 name = "pd-code-strong-sanity"
-version = "0.0.1"
-description = "Check if a pd_code represents a valid knot (with mandatory guarantee of an existing planar layout scheme)"
+version = "0.0.2"
+description = "Check if a pd_code represents a valid knot/link (with mandatory guarantee of an existing planar layout scheme)"
 authors = [
     {name = "GGN_2015",email = "neko@jlulug.org"}
 ]

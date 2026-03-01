@@ -1,5 +1,5 @@
 # pd_code_strong_sanity
-Check if a pd_code represents a valid knot (with mandatory guarantee of an existing planar layout scheme)
+Check if a pd_code represents a valid knot/link (with mandatory guarantee of an existing planar layout scheme)
 
 ## Install
 
