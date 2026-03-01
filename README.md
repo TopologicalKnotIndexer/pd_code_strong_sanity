@@ -1,2 +1,19 @@
 # pd_code_strong_sanity
-检查一个 pd_code 是否是合法的扭结（强制保证存在平面布局方案）
+Check if a pd_code represents a valid knot (with mandatory guarantee of an existing planar layout scheme)
+
+## Install
+
+```bash
+pip install pd-code-strong-sanity
+```
+
+## Usage
+
+```python
+import pd_code_strong_sanity
+
+pd_code = [
+    [1, 2, 1, 2]
+]
+print(pd_code_strong_sanity.sanity(pd_code)) # False
+```

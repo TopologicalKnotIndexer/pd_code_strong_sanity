@@ -1,0 +1,18 @@
+[project]
+name = "pd-code-strong-sanity"
+version = "0.0.1"
+description = "Check if a pd_code represents a valid knot (with mandatory guarantee of an existing planar layout scheme)"
+authors = [
+    {name = "GGN_2015",email = "neko@jlulug.org"}
+]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pd_code_to_diagram"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
