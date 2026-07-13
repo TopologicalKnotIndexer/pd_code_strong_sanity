@@ -1,6 +1,6 @@
 # pd-code-strong-sanity
 
-Check whether a structurally valid PD code can be realized by the diagram-layout engine.
+Check whether a PD code is accepted and routed by the diagram-layout engine.
 
 ## Installation
 
@@ -19,7 +19,9 @@ print(sanity(pd))
 
 ## Algorithm
 
-Strong sanity delegates to the layout engine and returns `True` only when it can construct a routed planar matrix without inconsistent sockets or crossings. It catches layout failures and exposes a simple boolean API. This is intentionally more expensive than structural sanity and should be used when geometric realizability is required.
+Strong sanity delegates to the layout engine and returns `True` only when it constructs a routed planar matrix without inconsistent sockets or crossings. It catches ordinary validation, build, and layout exceptions, but does not suppress process-control exceptions such as `KeyboardInterrupt` or `SystemExit`.
+
+This is a conservative executable check, not a mathematical decision procedure for PD-code realizability. `False` can mean either invalid input or that the bounded heuristic router did not find a layout. Use `pd-code-sanity` when only weak structural validation is required, and call `pd-code-to-diagram` directly when failure details matter.
 
 ## Input conventions
 
@@ -32,12 +34,14 @@ A PD code is represented as a list of four-entry crossings. Arc labels normally 
 
 ## Development
 
-Run examples and package checks before release. Python packages require Python 3.10 or newer. Build PyPI artifacts with:
+Python 3.10 or newer is required. Run the unit tests with the declared
+`pd-code-to-diagram` dependency available:
 
 ```bash
-poetry check
-poetry build
+python -m unittest discover -s tests -v
 ```
+
+No PyPI publication is performed as part of repository maintenance.
 
 ## License
 
