@@ -1,19 +1,23 @@
-# pd_code_strong_sanity
-Check if a pd_code represents a valid knot/link (with mandatory guarantee of an existing planar layout scheme)
+# pd-code-strong-sanity
 
-## Install
+Validate that a PD code can be realized by the diagram-layout backend.
+
+## Installation
 
 ```bash
 pip install pd-code-strong-sanity
 ```
 
-## Usage
+## Quick start
 
-```python
-import pd_code_strong_sanity
+`from pd_code_strong_sanity import sanity`; the function returns a boolean.
 
-pd_code = [
-    [1, 2, 1, 2]
-]
-print(pd_code_strong_sanity.sanity(pd_code)) # False
-```
+PD codes are lists of four-entry crossings. Each arc label must occur exactly twice. Functions validate their inputs and do not mutate caller-owned PD-code lists unless explicitly documented.
+
+## Development
+
+Use Python 3.10 or newer for Python packages. Build distributions with `poetry build`. Run the package's tests or examples before publishing. C++ projects require a modern standards-compliant compiler.
+
+## License
+
+MIT. See `LICENSE`.
