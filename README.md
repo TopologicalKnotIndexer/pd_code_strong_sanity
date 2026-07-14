@@ -53,7 +53,7 @@ If you use this repository in academic work, please cite it as:
 
 ```bibtex
 @software{topologicalknotindexer_pd_code_strong_sanity,
-  author = {{TopologicalKnotIndexer contributors}},
+  author = {{GGN\_2015}},
   title = {{pd\_code\_strong\_sanity}},
   year = {2026},
   url = {https://github.com/TopologicalKnotIndexer/pd_code_strong_sanity}
